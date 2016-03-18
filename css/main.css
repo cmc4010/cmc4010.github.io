@@ -1,3 +1,9 @@
+* {
+	padding:0;
+	margin:0;
+	box-sizing: border-box;
+}
+
 body {
 	background-color: rgb(250,250,250);
 	font-family: Georgia, Serif;
@@ -66,3 +72,43 @@ body {
 .heightHold200 {
 	height:200px;
 }
+
+/*.blackBack {
+	background-color:black;
+}
+
+.crazyMode {
+	position:fixed;
+	bottom:0;
+	opacity:0.5;
+	width:100%;
+}
+
+.crazyMode * {
+	padding:0;
+	margin:0;
+}
+
+.my-col-1 {
+	width: 8%;
+	display:inline-block;
+}
+
+.my-col-2 {
+	width: 16%;
+	display:inline-block;
+}
+
+.my-col-8 {
+	width: 66%;
+	display:inline-block;
+}
+
+.my-col-12 {
+	display:block;
+	width:100%;
+}
+
+.blocker {
+	display:block;
+}*/
