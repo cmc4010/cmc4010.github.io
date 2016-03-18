@@ -6,3 +6,9 @@ $(".item img").hover(
 		$(this).animate({opacity:1.0}, 400);
 	}
 );
+
+$( document ).ready(
+	function(){
+		$(".specialHold0").height($("#myNav").height() + 2);
+	}
+);

@@ -4,7 +4,12 @@ body {
 }
 
 #myNav {
-	box-shadow: 0px 0px 30px black;
+	box-shadow: 0px 0px 7px black;
+	position:fixed;
+	top:0;
+	width:100%;
+	background-color: rgb(252,252,252);
+	z-index:10;
 }
 
 #myNav h1 {
