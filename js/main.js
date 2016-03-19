@@ -10,6 +10,7 @@ $(".item img").hover(
 $( document ).ready(
 	function(){
 		$(".specialHold0").height($("#myNav").height() + 2);
+		dotAnim();
 	}
 );
 
@@ -37,4 +38,32 @@ function chinafy(){
 	document.getElementById("recentWorkText").innerHTML = "進期作品";
 	document.getElementById("workInProgress").innerHTML = "網站開發中 ...";
 	$(".specialHold0").height($("#myNav").height() + 2);
+}
+
+function dotAnim(){
+	var stuff = document.getElementById("dotDotDot");
+	var dotCount = 0;
+	setInterval(dotAction, 1000);
+	function dotAction(){
+		switch(dotCount) {
+			case 0:
+				stuff.innerHTML = "";
+				dotCount++; 
+				break;
+			case 1:
+				stuff.innerHTML = ".";
+				dotCount++;
+				break;
+			case 2:
+				stuff.innerHTML = "..";
+				dotCount++;
+				break;
+			case 3:
+				stuff.innerHTML = "...";
+				dotCount = 0;
+				break;
+			default:
+				dotCount = 0;
+		}
+	}
 }
