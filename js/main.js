@@ -1,16 +1,55 @@
-$(".item img").hover(
-	function(){
-		$(this).animate({opacity:0.7}, 400);
-	},
-	function(){
-		$(this).animate({opacity:1.0}, 400);
+
+var langMode = 0;
+
+function langHandle(){ // only manages the links, does not change actual language
+	var myLinks = document.getElementById("myFooter").getElementsByTagName("a");
+	var numLinks = myLinks.length;
+	if(langMode == 1){
+		if(myLinks[0].href.indexOf("?") == -1){
+			for(var i=0; i<numLinks; i++){
+				myLinks[i].href += "?cn";
+			}
+		}
 	}
-);
+	else {
+		if(myLinks[0].href.indexOf("?") != -1){
+			for(var i=0; i<numLinks; i++){
+				myLinks[i].href = myLinks[i].href.replace("?cn", "");
+			}
+		}
+	}
+}
+
+function grabURL(){
+	var locate = window.location;
+	document.langForm.langURL.value = locate;
+	var text = document.langForm.langURL.value;
+	var langChar1 = text.indexOf("?") + 1;
+	var langChar2 = text.indexOf("?") + 3;
+	var langText = text.substring(langChar1, langChar2);
+	return langText;
+}
 
 $( document ).ready(
 	function(){
+		// load NAVBAR and FOOTER format
+		document.getElementById("pageTitle").innerHTML = document.title.toUpperCase();
 		$(".specialHold0").height($("#myNav").height() + 2);
-		dotAnim();
+		// dotAnim();
+		$(".specialHold1").height($("#myFooter").height() + 50);
+
+		// language detect
+		var langText = grabURL();
+		if(langText == "cn"){
+			langMode = 1;
+			chinafy();
+		}
+		else {
+			langMode = 0;
+			//englify();
+		}
+
+		langHandle();
 	}
 );
 
@@ -19,51 +58,3 @@ $( window ).resize(
 		$(".specialHold0").height($("#myNav").height() + 2);		
 	}
 );
-
-function englify(){
-	document.getElementById("pageTitle").innerHTML = "PORTFOLIO";
-	document.getElementById("pageTitle").style.fontSize = "30px";
-	document.getElementById("myName").innerHTML = "<small>Chao-Ming Chang</small>";
-	document.getElementById("recentWorkText").innerHTML = "Recent Work";
-	document.getElementById("workInProgress").innerHTML = "Work in progress ...";
-	$(".specialHold0").height($("#myNav").height() + 2);
-}
-
-function chinafy(){
-	// $("pageTitle").html("作品集");
-	// $("myName").html( "<small>張晁銘</small>" );
-	document.getElementById("pageTitle").innerHTML = "作品集";
-	document.getElementById("pageTitle").style.fontSize = "35px";
-	document.getElementById("myName").innerHTML = "<small>張晁銘</small>";
-	document.getElementById("recentWorkText").innerHTML = "進期作品";
-	document.getElementById("workInProgress").innerHTML = "網站開發中 ...";
-	$(".specialHold0").height($("#myNav").height() + 2);
-}
-
-function dotAnim(){
-	var stuff = document.getElementById("dotDotDot");
-	var dotCount = 0;
-	setInterval(dotAction, 1000);
-	function dotAction(){
-		switch(dotCount) {
-			case 0:
-				stuff.innerHTML = "";
-				dotCount++; 
-				break;
-			case 1:
-				stuff.innerHTML = ".";
-				dotCount++;
-				break;
-			case 2:
-				stuff.innerHTML = "..";
-				dotCount++;
-				break;
-			case 3:
-				stuff.innerHTML = "...";
-				dotCount = 0;
-				break;
-			default:
-				dotCount = 0;
-		}
-	}
-}

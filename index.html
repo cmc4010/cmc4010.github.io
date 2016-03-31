@@ -16,26 +16,41 @@
 	<!-- sm: small devices >=768px -->
 	<!-- md: medium devices >=992px -->
 	<!-- lg large devices >=1200px -->
-	<div class="container" id="myNav"> <!-- z-index:10 -->
+	<div class="container-fluid" id="myNav"> <!-- z-index:10 -->
+		<!-- <script src="js/navbar.js"></script> -->
 		<div class="row">
 			<div class = "col-xs-0 col-md-2"></div>
-			<div class = "col-xs-9 col-md-7">
-				<h1 id="pageTitle"> PORTFOLIO </h1><h1 id="myName"> <small>Chao-Ming Chang</small></h1>
-			</div>
-			<div class = "col-xs-3 col-md-1">
-				<h2 id="gitLink"><a href="https://github.com/cmc4010" target="_blank">GitHub</a></h2>
+			<div class = "col-xs-12 col-md-8">
+				<div class="row">
+					<div class = "col-xs-9 col-md-7">
+						<h1 id="pageTitle"> PORTFOLIO </h1><h1 id="myName"> <small>Chao-Ming Chang</small></h1>
+					</div>
+					<div class = "col-xs-3 col-md-5">
+						<h2 id="gitLink"><a href="https://github.com/cmc4010" target="_blank">GitHub</a></h2>
+					</div>
+				</div>
 			</div>
 			<div class = "col-xs-0 col-md-2"></div>
 		</div>
 		<div class="row">
 			<div class = "col-xs-0 col-md-2"></div>
-			<div class = "col-xs-8 col-md-6">
-				<p class="lead">built with Bootstrap and jQuery<p>
-			</div>
-			<div class = "col-xs-4 col-md-2">
-				<div id="language"><button onclick="englify()" id="english" type="button">EN</button> / <button onclick="chinafy()" id="chinese" type="button">中文</button></div>
+			<div class = "col-xs-12 col-md-8">
+				<div class="row">
+					<div class = "col-xs-8 col-md-8">
+						<p class="lead">built with Bootstrap and jQuery<p>
+					</div>
+					<div class = "col-xs-0 col-md-1">
+						<!-- <a id="discLink" href="discovery/index.html" target="_blank">Discovery</a> -->
+					</div>
+					<div class = "col-xs-4 col-md-3">
+						<div id="language"><button onclick="englify()" id="english" type="button">EN</button> / <button onclick="chinafy()" id="chinese" type="button">中文</button></div>
+					</div>
+				</div>
 			</div>
 			<div class = "col-xs-0 col-md-2"></div>
+		</div>
+		<div class="row">
+			<div class="myPattern heightHold25"></div>
 		</div>
 	</div>
 	<div class="container-fluid specialHold0"></div>
@@ -70,8 +85,8 @@
 			<div class = "col-xs-0 col-sm-0 col-md-2 col-lg-2"></div>
 		</div>
 	</div>
-	<div class="container-fluid heightHold100"></div>
-	<div class="container-fluid">
+	<div class="container-fluid heightHold100 backBack"></div>
+	<div class="container-fluid backBack">
 		<div class="row">
 			<div class="col-xs-0 col-md-2"></div>
 			<div class="col-xs-12 col-md-8">
@@ -80,196 +95,35 @@
 			<div class="col-xs-0 col-md-2"></div>
 		</div>
 	</div>
-	<div class="container-fluid heightHold100"></div>
+	<div class="container-fluid heightHold200 backBack"></div>
+	<div class="container-fluid heightHold200 backBack"></div>
+	<div class="container-fluid specialHold1"></div>
 
-<!-- 	<div class="crazyMode">
-		<div class="my-col-2 heightHold100"></div>
-		<div class="my-col-8 heightHold100">
-			<div class="my-col-1 heightHold100">
-				<div class="blackBack" style="height:100px"></div>
-			</div>
-			<div class="my-col-1 heightHold100"></div>
-			<div class="my-col-1 heightHold100">
-				<div class="my-col-12" style="height:30px"></div>
-				<div class="blackBack" style="height:70px"></div>
-			</div>
-			<div class="my-col-1 heightHold100"></div>
-			<div class="my-col-1 heightHold100">
-				<div class="my-col-12" style="height:60px"></div>
-				<div class="blackBack" style="height:40px"></div>
-			</div>
-			<div class="my-col-1 heightHold100"></div>
-			<div class="my-col-1 heightHold100">
-				<div class="my-col-12" style="height:20px"></div>
-				<div class="blackBack" style="height:80px"></div>
-			</div>
-			<div class="my-col-1 heightHold100"></div>
-			<div class="my-col-1 heightHold100">
-				<div class="my-col-12" style="height:80px"></div>
-				<div class="blackBack" style="height:20px"></div>
-			</div>
-			<div class="my-col-1 heightHold100"></div>
-			<div class="my-col-1 heightHold100">
-				<div class="my-col-12" style="height:90px"></div>
-				<div class="blackBack" style="height:10px"></div>
-			</div>
-			<div class="my-col-1 heightHold100"></div>
-		</div>
-		<div class="my-col-2 heightHold100"></div>
-	</div> -->
-
-
-	<!-- <div class="container-fluid">
+	<div class="container-fluid" id="myFooter">
 		<div class="row">
-			<div class="col-xs-0 col-md-2"></div>
-			<div class="col-xs-12 col-md-8">
-				<div class="row">
-					<div class="col-xs-1">
-						<div class="row">
-							<div class="col-xs-1" style="height:100px">
-								<div class="blackBack" style="height:100px"></div>
-							</div>
-							<div class="col-xs-1"></div>
-							<div class="col-xs-1" style="height:100px">
-								<div style="height:30px"></div>
-								<div class="blackBack" style="height:70px"></div>
-							</div>
-							<div class="col-xs-1"></div>
-							<div class="col-xs-1" style="height:100px">
-								<div style="height:60px"></div>
-								<div class="blackBack" style="height:40px"></div>
-							</div>
-							<div class="col-xs-1"></div>
-							<div class="col-xs-1" style="height:100px">
-								<div style="height:20px"></div>
-								<div class="blackBack" style="height:80px"></div>
-							</div>
-							<div class="col-xs-1"></div>
-							<div class="col-xs-1" style="height:100px">
-								<div style="height:80px"></div>
-								<div class="blackBack" style="height:20px"></div>
-							</div>
-							<div class="col-xs-1"></div>
-							<div class="col-xs-1" style="height:100px">
-								<div style="height:90px"></div>
-								<div class="blackBack" style="height:10px"></div>
-							</div>
-							<div class="col-xs-1"></div>
-						</div>												
-					</div>
-					<div class="col-xs-1"></div>
-					<div class="col-xs-1">
-						<div class="row">
-							<div class="col-xs-1 blackBack" style="height:100px"></div>
-							<div class="col-xs-1 blackBack"></div>
-							<div class="col-xs-1 blackBack" style="height:70px"></div>
-							<div class="col-xs-1 blackBack"></div>
-							<div class="col-xs-1 blackBack" style="height:40px"></div>
-							<div class="col-xs-1 blackBack"></div>
-							<div class="col-xs-1 blackBack" style="height:80px"></div>
-							<div class="col-xs-1 blackBack"></div>
-							<div class="col-xs-1 blackBack" style="height:20px"></div>
-							<div class="col-xs-1 blackBack"></div>
-							<div class="col-xs-1 blackBack" style="height:10px"></div>
-							<div class="col-xs-1 blackBack"></div>
-						</div>						
-					</div>
-					<div class="col-xs-1"></div>
-					<div class="col-xs-1">
-						<div class="row">
-							<div class="col-xs-1 blackBack" style="height:100px"></div>
-							<div class="col-xs-1 blackBack"></div>
-							<div class="col-xs-1 blackBack" style="height:70px"></div>
-							<div class="col-xs-1 blackBack"></div>
-							<div class="col-xs-1 blackBack" style="height:40px"></div>
-							<div class="col-xs-1 blackBack"></div>
-							<div class="col-xs-1 blackBack" style="height:80px"></div>
-							<div class="col-xs-1 blackBack"></div>
-							<div class="col-xs-1 blackBack" style="height:20px"></div>
-							<div class="col-xs-1 blackBack"></div>
-							<div class="col-xs-1 blackBack" style="height:10px"></div>
-							<div class="col-xs-1 blackBack"></div>
-						</div>						
-					</div>
-					<div class="col-xs-1"></div>
-					<div class="col-xs-1">
-						<div class="row">
-							<div class="col-xs-1 blackBack" style="height:100px"></div>
-							<div class="col-xs-1 blackBack"></div>
-							<div class="col-xs-1 blackBack" style="height:70px"></div>
-							<div class="col-xs-1 blackBack"></div>
-							<div class="col-xs-1 blackBack" style="height:40px"></div>
-							<div class="col-xs-1 blackBack"></div>
-							<div class="col-xs-1 blackBack" style="height:80px"></div>
-							<div class="col-xs-1 blackBack"></div>
-							<div class="col-xs-1 blackBack" style="height:20px"></div>
-							<div class="col-xs-1 blackBack"></div>
-							<div class="col-xs-1 blackBack" style="height:10px"></div>
-							<div class="col-xs-1 blackBack"></div>
-						</div>							
-					</div>
-					<div class="col-xs-1"></div>
-					<div class="col-xs-1">
-						<div class="row">
-							<div class="col-xs-1 blackBack" style="height:100px"></div>
-							<div class="col-xs-1 blackBack"></div>
-							<div class="col-xs-1 blackBack" style="height:70px"></div>
-							<div class="col-xs-1 blackBack"></div>
-							<div class="col-xs-1 blackBack" style="height:40px"></div>
-							<div class="col-xs-1 blackBack"></div>
-							<div class="col-xs-1 blackBack" style="height:80px"></div>
-							<div class="col-xs-1 blackBack"></div>
-							<div class="col-xs-1 blackBack" style="height:20px"></div>
-							<div class="col-xs-1 blackBack"></div>
-							<div class="col-xs-1 blackBack" style="height:10px"></div>
-							<div class="col-xs-1 blackBack"></div>
-						</div>						
-					</div>
-					<div class="col-xs-1"></div>
-					<div class="col-xs-1">
-						<div class="row">
-							<div class="col-xs-1 blackBack" style="height:100px"></div>
-							<div class="col-xs-1 blackBack"></div>
-							<div class="col-xs-1 blackBack" style="height:70px"></div>
-							<div class="col-xs-1 blackBack"></div>
-							<div class="col-xs-1 blackBack" style="height:40px"></div>
-							<div class="col-xs-1 blackBack"></div>
-							<div class="col-xs-1 blackBack" style="height:80px"></div>
-							<div class="col-xs-1 blackBack"></div>
-							<div class="col-xs-1 blackBack" style="height:20px"></div>
-							<div class="col-xs-1 blackBack"></div>
-							<div class="col-xs-1 blackBack" style="height:10px"></div>
-							<div class="col-xs-1 blackBack"></div>
-						</div>						
-					</div>
-					<div class="col-xs-1 blackBack"></div>
-				</div>
+			<div class = "col-xs-0 col-md-2"></div>
+			<div class = "col-xs-12 col-md-8">
+				<!-- <div class="heightHold100"></div> -->
+				<a id="footLink1" href="index.html" target="_self">Portfolio</a><br>
+				<a id="footLink2" href="subpages/discovery/index.html" target="_self">Discovery</a><br>
+				<a id="footLink3" href="subpages/tools/index.html" target="_self">Tools</a><br>
+				<a id="footLink4" href="subpages/testsite/index.html" target="_self">Test Site</a><br>
+				<!-- <div class="heightHold100"></div> -->
 			</div>
-			<div class="col-xs-0 col-md-2"></div>
+			<div class = "col-xs-0 col-md-2"></div>
 		</div>
-	</div> -->
-	<div class="container-fluid heightHold100"></div>
+	</div>
+
+	<!-- for string covert purposes -->
+	<FORM NAME="langForm">
+		<INPUT TYPE="hidden" NAME="langURL">
+	</FORM>
 
 	<!-- jQuery 1.12.0 -->
 	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
 	<!-- custom Javascript -->
+	<script src="js/portfolio.js"></script>
 	<script src="js/main.js"></script>
+
 </body>
 </html>
-
-
-	<!-- ITEM TEMPLATE -->
-<!-- 	<div class="item col-xs-12 col-sm-6 col-md-5">
-		<img src="#" alt=""/>
-		<p class="projectName text-center"></p>
-		<p class="jobType text-center"></p>
-	</div>	 -->
-
-	<!-- CONTENT TEMPLATE -->
-<!-- 	<div class="container-fluid">
-		<div class="row">
-			<div class="col-xs-0 col-sm-0 col-md-2 col-lg-2"></div>
-
-			<div class="col-xs-0 col-sm-0 col-md-2 col-lg-2"></div>
-		</div>
-	</div> -->

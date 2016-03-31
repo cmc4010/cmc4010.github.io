@@ -4,7 +4,7 @@
 		position:fixed;
 		top:0;
 		width:100%;
-		background-color: rgb(252,252,252);
+		/*background-color: rgb(252,252,252);*/
 		z-index:10;
 	}
 
@@ -33,6 +33,16 @@
 		/*-webkit-box-shadow: 0px 6px 4px -3px rgba(0,0,0,0.75);
 		-moz-box-shadow: 0px 6px 4px -3px rgba(0,0,0,0.75);
 		box-shadow: 0px 6px 4px -3px rgba(0,0,0,0.75);*/
+	}
+
+	#discLink {
+		color:black;
+		text-decoration:none;
+		font-size:21px;
+	}
+
+	#discLink:hover{
+		color:grey;
 	}
 
 	#language {
