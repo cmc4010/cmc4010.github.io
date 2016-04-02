@@ -30,7 +30,4 @@ document.write('\
 			</div>\
 			<div class = "col-xs-0 col-md-2"></div>\
 		</div>\
-		<div class="row">\
-			<div class="myPattern heightHold25"></div>\
-		</div>\
 ');

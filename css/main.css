@@ -90,11 +90,6 @@ body {
 	background-color: rgb(250,250,250);
 }
 
-.myPattern {
-	background-image: url('../img/footer2_gray.jpg');
-	background-repeat: repeat-x;
-}
-
 .item {
 /*	border: 1px solid black;*/
 	overflow: hidden;
