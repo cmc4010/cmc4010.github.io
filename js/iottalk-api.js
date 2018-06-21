@@ -1,6 +1,5 @@
 (function() {
 
-
 function register(mac, profile, callback) {
     var ret = null;
     $.ajax({
@@ -74,7 +73,7 @@ function get(mac, feature, callback) {
     $.ajax({
         type: "GET",
         cache: false,
-        url: '/' + mac + '/' + feature,
+        url: 'http://140.113.199.200:9999/' + mac + '/' + feature,
         success: function(res) {
             ret = JSON.parse(res);
             if( typeof ret !== 'object' ||
@@ -97,8 +96,6 @@ function get(mac, feature, callback) {
         dataType: 'text',
     });
 }
-
-
 
 
 // Export to browser's global for debug
