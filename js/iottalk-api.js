@@ -52,7 +52,7 @@ function detach(mac, callback) {
 function update(mac, feature, data, callback) {
     $.ajax({
         type: "PUT",
-        url: '/' + mac + '/' + feature,
+        url: 'http://140.113.199.200:9999/' + mac + '/' + feature,
         contentType: "application/json; charset=utf-8",
         data: JSON.stringify({'data': [data]}),
         error: function(err, st) {
