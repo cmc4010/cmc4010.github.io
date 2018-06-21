@@ -5,7 +5,7 @@ function register(mac, profile, callback) {
     var ret = null;
     $.ajax({
         type: 'POST',
-        url: '/' + mac,
+        url: 'http://140.113.199.200:9999/' + mac,
         contentType: "application/json; charset=utf-8",
         data: JSON.stringify({'profile': profile}),
         success: function(res) {
