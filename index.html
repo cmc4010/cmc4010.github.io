@@ -8,11 +8,10 @@
     <title>AC_Remote</title>
     <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
   </head>
-
   <body>
 	<legend >AC_Switch</legend>
-  <button onclick="IoTtalk.update(mac, 'AC_Switch', Number(1));">ON</button>
-  <button onclick="IoTtalk.update(mac, 'AC_Switch', Number(0));">OFF</button>
+  <button onclick="IoTtalk.update(mac, 'AC_Switch', 1;">ON</button>
+  <button onclick="IoTtalk.update(mac, 'AC_Switch', 0;">OFF</button>
 	<!-- <button onclick="dan2.push('AC_Switch',[Math.random()])" >Send</button> <br> -->
     <legend >Dummy_Control</legend>
     <legend class='ODF_value'>_____________</legend>
@@ -21,7 +20,7 @@
   <script type="text/javascript" src="js/iottalk-api.js"></script>
   <script type="text/javascript">
         window.mac = Math.random().toString().slice(2);
-        window.d_name = '6.AC_Remote';
+        window.d_name = null;
     </script>
   <script type="text/javascript" src="js/registering.js"></script>
   </body>
