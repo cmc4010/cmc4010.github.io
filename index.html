@@ -13,14 +13,15 @@
   <button onclick="IoTtalk.update(mac, 'AC_Switch', 1)">ON</button>
   <button onclick="IoTtalk.update(mac, 'AC_Switch', 0)">OFF</button>
 	<!-- <button onclick="dan2.push('AC_Switch',[Math.random()])" >Send</button> <br> -->
-    <legend >Dorm Temperature</legend>
+    <!-- <legend >Dorm Temperature</legend> -->
     <!-- <button onclick="IoTtalk.get(mac, 'AC_Switch', function(data){$('.ODF_value')[0].innerText=data[0];}">Load Temp</button> -->
-    <legend class='ODF_value'>_____________</legend>
-    <br>
+    <!-- <legend class='ODF_value'>_____________</legend> -->
+    <!-- <br> -->
 
   <script type="text/javascript" src="js/iottalk-api.js"></script>
   <script type="text/javascript">
         window.mac = Math.random().toString().slice(2);
+        // console.log(mac);
         window.d_name = null;
     </script>
   <script type="text/javascript" src="js/registering.js"></script>

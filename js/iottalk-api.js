@@ -1,10 +1,12 @@
 (function() {
 
+const serverIP = 'http://140.113.199.200:9999';
+
 function register(mac, profile, callback) {
     var ret = null;
     $.ajax({
         type: 'POST',
-        url: 'http://140.113.199.200:9999/' + mac,
+        url: serverIP + '/' + mac,
         contentType: "application/json; charset=utf-8",
         data: JSON.stringify({'profile': profile}),
         success: function(res) {
@@ -29,7 +31,7 @@ function register(mac, profile, callback) {
 function detach(mac, callback) {
     $.ajax({
         type: "DELETE",
-        url: '/' + mac,
+        url: serverIP + '/' + mac,
         success: function(res) {
             console.log(res);
             console.log('Detach success');
@@ -51,7 +53,7 @@ function detach(mac, callback) {
 function update(mac, feature, data, callback) {
     $.ajax({
         type: "PUT",
-        url: 'http://140.113.199.200:9999/' + mac + '/' + feature,
+        url: serverIP + '/' + mac + '/' + feature,
         contentType: "application/json; charset=utf-8",
         data: JSON.stringify({'data': [data]}),
         error: function(err, st) {
@@ -73,7 +75,7 @@ function get(mac, feature, callback) {
     $.ajax({
         type: "GET",
         cache: false,
-        url: 'http://140.113.199.200:9999/' + mac + '/' + feature,
+        url: serverIP + '/' + mac + '/' + feature,
         success: function(res) {
             ret = JSON.parse(res);
             if( typeof ret !== 'object' ||

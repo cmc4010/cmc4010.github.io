@@ -18,7 +18,8 @@ IoTtalk.register(mac, {
     $('body > main').css('opacity', '1');
     console.log(ret)
     ret = JSON.parse(ret);
-    window.d_name = ret.d_name;
+    // window.d_name = ret.d_name;
+    console.log('registered: ', ret.d_name);
     $('body > main > section > header > span > small').html(ret.d_name);
 });
 
