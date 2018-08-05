@@ -2,7 +2,11 @@
 <html>
 <head>
 <style>
-  #subButton { width: 205px; height: 25px; }
+  html, body { height: 100%; }
+  body { background-color: blue; }
+  input { display: block; width: 50%; height: 20%; margin: auto; }
+  #subButton { display: block; width: 205px; height: 10%; margin: auto;}
+  #result { text-align: center; }
 </style>
 </head>
 <body>
@@ -11,7 +15,7 @@
 <input type="datetime-local" id="end-time">
 <br>
 <button type="button" id="subButton">Submit</button>
-
+<br>
 <div id="result">Result will be shown here.</div>
 <script type="text/javascript" src="./js/index.js"></script>
 </body>
